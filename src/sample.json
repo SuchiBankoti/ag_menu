@@ -1,0 +1,112 @@
+{"columns": [
+    { "headerName": "Brand", "field": "brand", "checkboxSelection": true, "filter": true, "floatingFilter": true },
+    { "headerName": "Description", "field": "description" },
+    { "headerName": "Members", "field": "members", "valueFormatter": "formatMembers" },
+    { "headerName": "Categories", "field": "categories", "valueFormatter": "formatCategories" },
+    { "headerName": "Tags", "field": "tags", "valueFormatter": "formatTags" },
+    { "headerName": "Nextmeeting", "field": "nextmeeting" }
+  ],
+
+"rows":[
+    {
+      "brand": "Toyota",
+      "description": "Celica",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    },
+    {
+      "brand": "njjToyota",
+      "description": "Cffeli",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    },
+    {
+      "brand": "oooToyota",
+      "description": "ddddddddCelica",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    },
+    {
+      "brand": "yyToyota",
+      "description": "yyyyyyCelica",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    },
+    {
+      "brand": "Toyuuota",
+      "description": "bbbbbbCelica",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    },
+    {
+      "brand": "wwToyota",
+      "description": "yyyyyyyyyCelica",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    },
+    {
+      "brand": "qqToyota",
+      "description": "rrrrrhhhh hhhh Celica",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    },
+    {
+      "brand": "jjToyota",
+      "description": "yyyyy kkkkk Celica",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    },
+    {
+      "brand": "aaToyota",
+      "description": "hhhhhh bbbbbbbb Celica",
+      "members": [
+        { "url": "one/img" },
+        { "url": "two/img" }
+      ],
+      "categories": ["automobile", "B2B"],
+      "tags": ["digitaltransformation", "online"],
+      "nextmeeting": "date"
+    }
+  ]
+}
+  
