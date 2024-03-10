@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 10px;
+    border: 1px solid whitesmoke;
+    height: 40px;
+}
+.title{
+text-transform: capitalize;
+font-size: 18px;
+font-weight: 500;
+}
+.navbar-sub{
+display: flex;
+gap: 10px;
+align-items: center;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+#input{
+  border: 0px;
+  outline: none;
+}

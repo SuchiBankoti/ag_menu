@@ -1,0 +1,131 @@
+.sidebar{
+    width: 20vw;
+    height: 100%;
+    border: 1px solid whitesmoke;
+    padding: 3px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar-top>div ,.sidebar-bottom>div{
+    display: flex;
+    width: 100%;
+    border:1px solid whitesmoke;
+    padding: 0px 3px;
+}
+.sidebar-top>div :hover{
+    background-color:whitesmoke;
+}
+.sidebar-bottom>div:hover{
+    background-color:whitesmoke;
+
+}
+.title-bar{
+    justify-content: space-between;
+    align-items: center;
+
+}
+.sidebar-icon{
+    font-size: 28px;
+    border: 1px solid whitesmoke;
+    background-color: black;
+    color: white;
+}
+.title-bar>div{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+}
+.title-subbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.sub{
+
+}
+.sub-title{
+font-size: 15px;
+font-weight: 600;
+}
+.team-container{
+ flex-direction: column;
+  height: fit-content;
+  align-items: flex-start;
+
+}
+.team{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+}
+.team>div{
+    display: flex;
+    gap:3px;
+}
+.create-team{
+    height: 40px;
+    align-items: center;
+    gap: 3px;
+}
+.create-team:hover{
+    background-color:whitesmoke;
+
+}
+.folders{
+   
+    background-color: antiquewhite;
+    height:fit-content;
+    flex-direction: column;
+}
+.folder-sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+.sidebar-sub{
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.btn{
+background-color: black;
+color: white;
+}
+
+.folders {
+    position: relative;
+  }
+  
+  .folder-sub {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .folder-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+  }
+  
+  .folder-container.show {
+    max-height: 200px; 
+  }
+  
+  .folder {
+    display: flex;
+    align-items: center;
+    padding:6px 3px;
+    gap: 3px;
+  }
+  

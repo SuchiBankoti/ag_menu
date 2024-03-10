@@ -2,13 +2,14 @@
     { "headerName": "Brand", "field": "brand", "checkboxSelection": true, "filter": true, "floatingFilter": true },
     { "headerName": "Description", "field": "description" },
     { "headerName": "Members", "field": "members", "valueFormatter": "formatMembers" },
-    { "headerName": "Categories", "field": "categories", "valueFormatter": "formatCategories" },
-    { "headerName": "Tags", "field": "tags", "valueFormatter": "formatTags" },
+    { "headerName": "Categories", "field": "categories", "valueFormatter": "formatCategories", "filter": true, "floatingFilter": true },
+    { "headerName": "Tags", "field": "tags", "valueFormatter": "formatTags" ,"filter": true, "floatingFilter": true},
     { "headerName": "Nextmeeting", "field": "nextmeeting" }
   ],
 
 "rows":[
     {
+      "id":1,
       "brand": "Toyota",
       "description": "Celica",
       "members": [
@@ -19,7 +20,7 @@
       "tags": ["digitaltransformation", "online"],
       "nextmeeting": "date"
     },
-    {
+    {"id":2,
       "brand": "njjToyota",
       "description": "Cffeli",
       "members": [
@@ -30,7 +31,7 @@
       "tags": ["digitaltransformation", "online"],
       "nextmeeting": "date"
     },
-    {
+    {"id":3,
       "brand": "oooToyota",
       "description": "ddddddddCelica",
       "members": [
@@ -41,7 +42,7 @@
       "tags": ["digitaltransformation", "online"],
       "nextmeeting": "date"
     },
-    {
+    {"id":4,
       "brand": "yyToyota",
       "description": "yyyyyyCelica",
       "members": [
@@ -52,7 +53,7 @@
       "tags": ["digitaltransformation", "online"],
       "nextmeeting": "date"
     },
-    {
+    {"id":5,
       "brand": "Toyuuota",
       "description": "bbbbbbCelica",
       "members": [
@@ -64,6 +65,7 @@
       "nextmeeting": "date"
     },
     {
+      "id":6,
       "brand": "wwToyota",
       "description": "yyyyyyyyyCelica",
       "members": [
@@ -74,7 +76,7 @@
       "tags": ["digitaltransformation", "online"],
       "nextmeeting": "date"
     },
-    {
+    {"id":7,
       "brand": "qqToyota",
       "description": "rrrrrhhhh hhhh Celica",
       "members": [
@@ -85,7 +87,7 @@
       "tags": ["digitaltransformation", "online"],
       "nextmeeting": "date"
     },
-    {
+    {"id":8,
       "brand": "jjToyota",
       "description": "yyyyy kkkkk Celica",
       "members": [
@@ -96,7 +98,7 @@
       "tags": ["digitaltransformation", "online"],
       "nextmeeting": "date"
     },
-    {
+    {"id":9,
       "brand": "aaToyota",
       "description": "hhhhhh bbbbbbbb Celica",
       "members": [

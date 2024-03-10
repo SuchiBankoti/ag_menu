@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.App{
+    display: flex;
+    border: 1px solid whitesmoke;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.btn-container{
+    padding: 3px;
+    border: 1px solid whitesmoke;
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
