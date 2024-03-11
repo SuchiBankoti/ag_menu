@@ -20,3 +20,16 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.grid-profile-img{
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px -10px 0px 5px;
+    border: 1px solid grey;
+}
+.category-button{
+ border: 1px solid red;
+}
+.tag-button{
+    border: 1px solid green;
+}

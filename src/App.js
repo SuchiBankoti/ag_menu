@@ -15,23 +15,116 @@ const App = () => {
   const[searchVal,setSearchVal]=useState('')
   const myRef=useRef(null)
   
-  const formatters =useMemo(() => ({
-    formatMembers: params => params.data.members.map(member => member.url).join(', '),
-    formatCategories: params => params.data.categories.join(', '),
-    formatTags: params => params.data.tags.join(', ')
-  }),[])
+  const formatters = useMemo(() => ({
+    formatCategories: params => (
+      <div>
+        {Array.isArray(params.data.categories) ?
+          params.data.categories.map((category, index) => (
+            <button key={index} className="category-button">
+              {category}
+            </button>
+          ))
+        :
+          <button className="category-button">
+            {params.data.categories}
+          </button>
+        }
+      </div>
+    ),
+    formatTags: params => (
+      <div>
+        {Array.isArray(params.data.tags) ?
+          params.data.tags.map((tag, index) => (
+            <button key={index} className="tag-button">
+              {tag}
+            </button>
+          ))
+        :
+          <button className="tag-button">
+            {params.data.tags}
+          </button>
+        }
+      </div>
+    ),
+  }), []);
+  
+  const customImageRenderer = (params) => {
+    const imageUrlArray = params.value.map((member) => member.url);
+    return imageUrlArray.map((url, index) => (
+      <img key={index} src={url} alt={`Member ${index + 1}`} className='grid-profile-img' />
+    ));
+  };
+  
+  const getTimeLeftForMeeting = (nextMeetingDate) => {
+    const now = new Date();
+    const meetingDate = new Date(nextMeetingDate);
+    
+    if (
+      meetingDate.getDate() === now.getDate() &&
+      meetingDate.getMonth() === now.getMonth() &&
+      meetingDate.getFullYear() === now.getFullYear()
+    ) {
+      const timeDiff = meetingDate.getTime() - now.getTime();
+      const minutesLeft = Math.floor(timeDiff / (1000 * 60));
+      
+      if (minutesLeft <= 0) {
+        return 'Meeting is in progress';
+      } else {
+        return `${minutesLeft} min left for the meeting today`;
+      }
+    }
+    
+    const tomorrow = new Date(now);
+    tomorrow.setDate(now.getDate() + 1);
+    
+    if (
+      meetingDate.getDate() === tomorrow.getDate() &&
+      meetingDate.getMonth() === tomorrow.getMonth() &&
+      meetingDate.getFullYear() === tomorrow.getFullYear()
+    ) {
+      return 'Meeting is tomorrow';
+    }
+    
+    return `Meeting on ${meetingDate.toDateString()}`;
+  };
+  
 
   useEffect(() => {
-    const formattedColumns = data.columns.map(column => {
+    const formattedColumns = data.columns.map((column) => {
+      if (column.field === 'members') {
+        return {
+          ...column,
+          cellRenderer: customImageRenderer,
+        };
+      }
+  
+      if (column.field === 'nextmeeting') {
+        return {
+          ...column,
+          valueFormatter: (params) => getTimeLeftForMeeting(params.data.nextmeeting),
+          cellClass: 'date-cell',
+        };
+      }
+  
+      if (column.field === 'categories' || column.field === 'tags') {
+        return {
+          ...column,
+          valueFormatter: formatters[column.field],
+          cellClass: `${column.field}-cell`,
+        };
+      }
+  
       return {
         ...column,
-        valueFormatter: formatters[column.valueFormatter] 
+        valueFormatter: column.field in formatters ? formatters[column.field] : null,
       };
     });
-
-    setColumnDefs(formattedColumns)
-    setRowData(data.rows)
-  }, [formatters])
+  
+    setColumnDefs(formattedColumns);
+    setRowData(data.rows);
+  }, [formatters]);
+  
+  
 
   const handleSelectionChanged = () => {
     const selected = myRef.current.api.getSelectedNodes();

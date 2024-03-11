@@ -17,11 +17,15 @@ const Sidebar = () => {
               <div>
                 <CiBank className="sidebar-icon"/>
                 <div className="title-subbar">
-                    <div className="sub">sub</div>
+                    <div className="sub">INC</div>
                     <div className="sub-title">title</div>
                 </div>
               </div>
-              <div>img</div>
+                  <div>
+                      <img
+                          src={'https://plus.unsplash.com/premium_photo-1688350808212-4e6908a03925?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+                          alt="profile" className="grid-profile-img" />
+                  </div>
           </div>
           <div className="team-container">
               
