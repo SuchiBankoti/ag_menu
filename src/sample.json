@@ -2,10 +2,10 @@
   "columns": [
     { "headerName": "Brand", "field": "brand", "checkboxSelection": true, "filter": true, "floatingFilter": true },
     { "headerName": "Description", "field": "description" },
-    { "headerName": "Members", "field": "members" },
-    { "headerName": "Categories", "field": "categories", "valueFormatter": "formatCategories", "filter": true, "floatingFilter": true },
-    { "headerName": "Tags", "field": "tags", "valueFormatter": "formatTags" ,"filter": true, "floatingFilter": true},
-    { "headerName": "Nextmeeting", "field": "nextmeeting" }
+    { "headerName": "Members", "field": "members","cellRenderer":"imageRenderer" },
+    { "headerName": "Categories", "field": "categories", "filter": true, "floatingFilter": true,"cellRenderer":"categoryRenderer" },
+    { "headerName": "Tags", "field": "tags","filter": true, "floatingFilter": true,"cellRenderer":"tagRenderer"},
+    { "headerName": "Nextmeeting", "field": "nextmeeting","cellRenderer":"meetingRenderer" }
   ],
   "rows": [
     {

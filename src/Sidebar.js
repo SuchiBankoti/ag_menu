@@ -105,7 +105,7 @@ const Sidebar = () => {
               </div>
           </div>
           <div className="sidebar-sub">
-              <div>days left on trial</div>
+              <div><button>7</button>days left on trial</div>
               <button className="btn">Add-btn</button>
               </div>
           </div>
